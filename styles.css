@@ -49,17 +49,22 @@ html { scroll-behavior: smooth; }
     content-visibility: auto;
     contain-intrinsic-size: 1px 800px;
 }
-html { overflow-x: hidden; }
+html, body {
+    overflow-x: clip;
+    max-width: 100vw;
+    width: 100%;
+    position: relative;
+}
 body {
     font-family: var(--font-sans);
     font-size: 16px;
     line-height: 1.5;
     color: var(--ink-700);
     background: #FFFFFF;
-    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
-    max-width: 100vw;
 }
+/* Garantir que toda section nunca cause overflow horizontal */
+section, header, footer, main { max-width: 100vw; overflow-x: clip; }
 a { color: inherit; text-decoration: none; }
 img, svg { display: block; max-width: 100%; }
 button { font: inherit; cursor: pointer; border: 0; background: none; }
@@ -4343,12 +4348,36 @@ ul { list-style: none; }
         text-overflow: ellipsis;
     }
     .badge__dot { width: 6px; height: 6px; flex-shrink: 0; }
-    .hero__ctas { gap: 12px; width: 100%; }
-    .hero__ctas .btn--lg {
-        flex: 1;
-        padding: 16px 20px;
-        font-size: 14px;
+    .hero__ctas {
+        gap: 10px;
+        width: 100%;
+        flex-wrap: nowrap;
     }
+    .hero__ctas .btn--lg {
+        flex: 1 1 0;
+        min-width: 0;
+        padding: 13px 14px;
+        font-size: 13px;
+        letter-spacing: 0.01em;
+        gap: 6px;
+    }
+    .hero__ctas .btn--primary svg {
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
+        display: inline-block;
+    }
+    .hero__ctas .btn--outline .btn-play-ring {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        margin-right: 2px;
+    }
+    .hero__ctas .btn--outline .btn-play-ring svg {
+        width: 8px;
+        height: 8px;
+    }
+    .hero__ctas .btn span { white-space: nowrap; }
     .hero__trust { flex-direction: column; gap: 14px; }
     .trust-divider { display: none; }
 
@@ -4503,8 +4532,15 @@ ul { list-style: none; }
 
 @media (max-width: 420px) {
     .hero__title { font-size: 26px; }
-    .pp-cards-bottom-dark { grid-template-columns: 1fr; }
-    .pp-card-dark__value { font-size: 17px; }
+    /* Layout 1-2-2-2: manter bottom cards em 2 colunas */
+    .pp-cards-bottom-dark { grid-template-columns: 1fr 1fr; gap: 6px; }
+    .pp-mini-dark { padding: 9px 10px; }
+    .pp-mini-dark strong { font-size: 14px; }
+    .pp-mini-dark span { font-size: 10.5px; }
+    .pp-mini-dark__icon { width: 22px; height: 22px; }
+    .pp-mini-dark__icon svg { width: 11px; height: 11px; }
+    .pp-card-dark__value { font-size: 16px; }
+    .pp-card-dark { padding: 10px 12px; }
 }
 
 /* =========================================
