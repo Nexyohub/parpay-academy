@@ -3827,7 +3827,10 @@ ul { list-style: none; }
     padding: 110px 0 60px;
     background: var(--white);
     color: var(--ink-900);
+}
+.autonomia__bg {
     overflow: hidden;
+    inset: 0;
 }
 .autonomia__bg {
     position: absolute;
@@ -3955,6 +3958,7 @@ ul { list-style: none; }
 
 .autonomia__pricecard {
     position: relative;
+    z-index: 5;
     background: linear-gradient(160deg, #0a3251 0%, #082A47 30%, #021526 100%);
     border: 1px solid rgba(92, 200, 21, 0.35);
     border-radius: 32px;
@@ -4141,8 +4145,10 @@ ul { list-style: none; }
 /* =========================================
    BAND
    ========================================= */
-/* Band - cards 1:1 flutuantes verde claro (continua sem divíória) */
+/* Band - cards 1:1 flutuantes verde claro (continua sem divisória) */
 .band {
+    position: relative;
+    z-index: 1;
     background: var(--white);
     padding: 0 0 60px;
     border-top: 0;
