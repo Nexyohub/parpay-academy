@@ -140,7 +140,7 @@ ul { list-style: none; }
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     color: var(--ink-900);
 }
 .logo__mark { width: 30px; height: 30px; flex-shrink: 0; }
@@ -150,18 +150,18 @@ ul { list-style: none; }
     line-height: 1;
 }
 .logo__wordmark svg {
-    height: 22px;
+    height: 20px;
     width: auto;
     display: block;
 }
 .logo__sub {
     font-style: normal;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 500;
     color: var(--green-500);
     letter-spacing: -0.015em;
     text-transform: lowercase;
-    margin-left: 6px;
+    margin-left: 2px;
     padding-bottom: 2px;
     align-self: end;
     font-family: var(--font-sans);
@@ -4323,12 +4323,13 @@ ul { list-style: none; }
     .hero__trust { flex-direction: column; gap: 14px; }
     .trust-divider { display: none; }
 
-    /* Header mobile - logo maior + login com icon */
+    /* Header mobile - logo proporcional */
     .nav__inner { height: 64px; }
-    .nav .logo__wordmark svg { height: 22px; }
+    .nav .logo { gap: 6px; }
+    .nav .logo__wordmark svg { height: 18px; }
     .nav .logo__sub {
-        font-size: 13px;
-        margin-left: 4px;
+        font-size: 12px;
+        margin-left: 2px;
     }
     .nav__login {
         width: 40px;
@@ -4391,6 +4392,9 @@ ul { list-style: none; }
         padding-left: 16px;
         padding-right: 16px;
         padding-bottom: 60px;
+        padding-top: 40px;
+        margin-top: 30px;
+        animation: dashEntry 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.6s !important;
     }
     .hero__dashboard {
         grid-template-columns: 1fr;
@@ -4455,60 +4459,87 @@ ul { list-style: none; }
 }
 
 /* =========================================
-   STICKY STACK CARDS — Mobile only
-   position: sticky + z-index incremental
-   Cards ficam "atrás" do próximo conforme scrolla
+   STICKY STACKED CARDS — Mobile only
+   Cada card fica preso temporariamente no top durante scroll,
+   próximo card sobe e se sobrepõe (z-index crescente)
    ========================================= */
 @media (max-width: 768px) {
-    /* Desativa content-visibility que quebra sticky */
-    .recursos, .experiencia { content-visibility: visible !important; }
+    /* Garantir que parents não quebrem o sticky */
+    .recursos,
+    .experiencia,
+    .recursos > .container,
+    .experiencia > .container,
+    .recursos__grid,
+    .experiencia__bento {
+        content-visibility: visible !important;
+        overflow: visible !important;
+    }
 
-    /* Recursos completos - sticky stacked */
+    /* Recursos completos - 6 cards sticky stacked */
     .recursos__grid {
-        display: block;
+        display: flex;
+        flex-direction: column;
         gap: 0;
-        padding-bottom: 30vh;
+        padding-bottom: 0;
     }
     .recursos__grid > .recurso-card {
         position: sticky;
-        top: 100px;
-        margin-bottom: 20px;
-        height: 420px;
-        will-change: transform;
+        top: 90px;
+        height: 460px;
+        margin-bottom: 24px;
         animation: none !important;
         opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    /* Último card sem margin extra (não há próximo pra empilhar) */
+    .recursos__grid > .recurso-card:last-child {
+        margin-bottom: 0;
     }
     /* z-index crescente: cada novo card cobre o anterior */
-    .recursos__grid > .recurso-card:nth-child(1) { top: 100px; z-index: 1; }
-    .recursos__grid > .recurso-card:nth-child(2) { top: 108px; z-index: 2; }
-    .recursos__grid > .recurso-card:nth-child(3) { top: 116px; z-index: 3; }
-    .recursos__grid > .recurso-card:nth-child(4) { top: 124px; z-index: 4; }
-    .recursos__grid > .recurso-card:nth-child(5) { top: 132px; z-index: 5; }
-    .recursos__grid > .recurso-card:nth-child(6) { top: 140px; z-index: 6; }
+    .recursos__grid > .recurso-card:nth-child(1) { z-index: 1; }
+    .recursos__grid > .recurso-card:nth-child(2) { z-index: 2; }
+    .recursos__grid > .recurso-card:nth-child(3) { z-index: 3; }
+    .recursos__grid > .recurso-card:nth-child(4) { z-index: 4; }
+    .recursos__grid > .recurso-card:nth-child(5) { z-index: 5; }
+    .recursos__grid > .recurso-card:nth-child(6) { z-index: 6; }
 
-    /* Experiência bento - sticky stacked */
+    /* Experiência bento - sticky stacked (CTA fora do stack) */
     .experiencia__bento {
-        display: block;
+        display: flex;
+        flex-direction: column;
         gap: 0;
-        padding-bottom: 25vh;
+        padding-bottom: 0;
     }
     .experiencia__bento > .bento {
         position: sticky;
-        top: 100px;
-        margin-bottom: 18px;
-        height: 380px;
-        will-change: transform;
+        top: 90px;
+        height: 420px;
+        margin-bottom: 24px;
         animation: none !important;
         opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
     }
-    .experiencia__bento > .bento:nth-child(1) { top: 100px; z-index: 1; }
-    .experiencia__bento > .bento:nth-child(2) { top: 110px; z-index: 2; }
-    .experiencia__bento > .bento:nth-child(3) { top: 120px; z-index: 3; }
-    .experiencia__bento > .bento:nth-child(4) {
-        top: 130px;
-        z-index: 4;
+    .experiencia__bento > .bento:nth-child(1) { z-index: 1; }
+    .experiencia__bento > .bento:nth-child(2) { z-index: 2; }
+    .experiencia__bento > .bento:nth-child(3) {
+        z-index: 3;
+        margin-bottom: 0;
+    }
+    /* CTA card - NÃO sticky, flow normal pra não criar vazio */
+    .experiencia__bento > .bento--cta {
+        position: relative;
         height: auto;
-        min-height: 380px;
+        min-height: auto;
+        margin-bottom: 0;
+        margin-top: 24px;
+        z-index: 5;
+    }
+
+    /* Reduzir padding-bottom da experiencia em mobile */
+    .experiencia {
+        padding-bottom: 60px;
     }
 }
 
