@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parpay Academy — Venda seus Infoprodutos, Serviços e Eventos</title>
+    <meta name="description" content="Crie, venda e gerencie seus infoprodutos, serviços e eventos com mais autonomia, performance e segurança." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow--1"></div>
+    <div class="bg-glow bg-glow--2"></div>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="nav">
+        <div class="container nav__inner">
+            <a href="#" class="logo">
+                <span class="logo__wordmark">
+                    <svg viewBox="0 0 519 94" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Parpay">
+                        <path d="M384.28 0.532357C386.87 0.322958 389.466 0.268759 392.061 0.369271C402.08 0.7621 411.324 5.69004 418.074 12.9669C423.101 8.00006 425.524 6.08422 431.956 3.31361C433.401 5.38335 438.222 16.5814 438.055 19.0333C437.781 22.977 429.921 27.2548 429.088 32.0021C427.048 43.627 427.926 60.3675 428.075 72.2697C425.547 73.7579 414.576 78.5312 411.562 77.8214C409.672 76.0634 408.935 74.7392 407.794 72.4601C404.164 74.6409 400.04 75.65 395.819 76.3576C361.073 82.1856 337.863 43.1032 358.914 15.1554C365.017 7.05772 373.926 1.98186 384.28 0.532357ZM408.222 37.4454C407.592 27.0563 398.7 19.1226 388.311 19.6847C377.829 20.2518 369.81 29.2487 370.445 39.7335C371.079 50.2185 380.125 58.1823 390.598 57.4796C400.978 56.7835 408.852 47.8351 408.222 37.4454Z" fill="#43C834"/>
+                        <path d="M130.122 0.532337C144.163 -1.015 154.168 3.35611 163.998 13.0284C167.354 8.81317 172.952 5.18813 177.981 3.27355C187.903 28.7348 184.294 14.3665 174.562 32.5851C172.793 35.8966 173.904 65.8418 173.72 72.7345C169.472 74.1747 161.15 78.3378 157.247 77.8058C155.023 75.7501 154.892 75.0572 154.149 72.1485C150.239 74.3249 145.963 75.7656 141.534 76.3995C130.964 77.9402 120.926 75.9997 112.32 69.5441C103.971 63.2987 98.4683 53.9693 97.0381 43.6378C95.6693 33.8548 98.5183 23.3091 104.457 15.4464C110.679 7.24634 119.92 1.87646 130.122 0.532337ZM153.769 34.5851C151.565 24.4309 141.594 17.9511 131.426 20.0655C121.129 22.2067 114.553 32.3372 116.784 42.6202C119.016 52.9032 129.199 59.3926 139.456 57.0685C149.585 54.773 155.972 44.7392 153.769 34.5851Z" fill="#014572"/>
+                        <path d="M297.782 0.528407C309.4 -0.248352 318.833 1.53704 328.002 9.34652C335.664 16.0006 340.436 25.3785 341.304 35.4932C342.137 45.7489 338.841 55.9124 332.148 63.725C323.966 73.2524 315.049 76.0782 303.091 77.0022C303.201 71.9594 302.417 64.6966 303.699 59.9844C304.646 57.8019 309.303 56.1055 311.383 55.2419C320.9 51.2929 324.592 39.8297 320.045 30.4808C317.833 25.8489 313.85 22.3037 308.995 20.6448C303.201 18.6632 299.095 19.4969 293.896 22.0634C292.424 22.931 291.045 23.9476 289.78 25.0964C280.603 33.4979 285.37 51.0187 284.123 62.1203C283.449 68.1303 285.269 89.7729 281.568 93.1409C276.911 94.6785 269.024 90.1978 264.301 88.1956C264.45 78.7223 265.468 38.3009 263.353 32.3407C261.56 27.2913 256.15 24.6022 254.55 20.3499C253.175 16.6856 258.586 6.79803 260.119 3.14082C266.393 5.64126 269.522 8.47102 274.505 12.9535C280.131 5.99085 289.093 1.91749 297.782 0.528407Z" fill="#43C834"/>
+                        <path d="M43.352 0.536904C97.62 -5.34654 103.238 75.697 48.5471 76.8185C48.6062 72.008 47.9576 65.3589 49.0582 60.8015C49.727 58.0317 54.5124 56.5941 57.0802 55.3134C62.0863 52.817 64.9409 50.3011 66.7879 44.8197C68.4066 40.0203 68.0392 34.773 65.7683 30.246C63.5094 25.6846 59.5281 22.2112 54.704 20.5933C48.9974 18.6858 44.5571 19.6544 39.4188 22.2103C27.2962 29.9563 29.7737 43.2098 29.586 55.8134C29.4794 62.9461 29.4247 71.4998 29.712 78.5166C30.6069 100.349 24.7315 93.8772 10.2729 88.4139C10.2195 73.9883 10.4729 59.1086 10.576 44.9846C10.68 30.6983 8.49724 30.4338 0.212686 20.0396C-1.20119 18.2662 4.85041 6.14526 6.10744 3.41206C12.3326 5.61317 15.2604 8.42573 20.0338 12.85C27.2751 6.18538 33.2575 2.08161 43.352 0.536904Z" fill="#014572"/>
+                        <path d="M482.819 0C488.067 0.0789103 494.385 -0.127402 499.456 0.604392C500.139 1.66549 501.131 3.88909 501.717 5.10713C501.025 7.392 500.227 9.56754 499.298 11.7629C492.799 27.0768 486.86 42.7923 479.814 57.8598C471.668 71.3358 461.19 75.7905 446.135 77.0112C446.162 73.3623 445.624 64.7113 446.307 61.7418C447.902 54.8052 466.473 54.8052 462.05 44.0871C457.401 32.4626 452.378 20.9791 447.611 9.40487C445.316 3.82737 446.087 0.940755 452.334 0.146803C456.379 -0.0462847 461.085 0.0480538 465.182 0.0326244C467.271 6.51958 471.17 15.0238 473.734 21.8709C476.739 16.0598 480.674 6.21452 482.819 0Z" fill="#43C834"/>
+                        <path d="M240.438 0.540745L245.456 0.270508C245.373 5.17882 246.505 12.1225 244.936 16.709C243.958 19.5669 239.151 20.9159 236.605 22.1511C234.6 23.1228 232.485 24.2566 231.102 26.0574C226.169 32.4761 212.526 67.4562 209.289 76.7646L195.519 76.7628C194.245 76.7465 193.305 76.5966 192.226 75.8842C191.39 75.3314 190.531 74.4925 190.354 73.4622C189.764 70.0299 207.626 28.6399 210.662 22.443C212.1 19.5083 213.758 16.5939 215.742 13.9912C221.381 6.59921 231.397 1.77333 240.438 0.540745Z" fill="#014572"/>
+                        <path d="M512.837 0.167045C515.529 -0.356673 518.142 1.38817 518.688 4.07729C519.239 6.76641 517.521 9.39558 514.838 9.96955C512.119 10.551 509.449 8.80266 508.894 6.07783C508.334 3.353 510.11 0.697816 512.837 0.167045Z" fill="#014572"/>
+                    </svg>
+                </span>
+                <em class="logo__sub">academy</em>
+            </a>
+
+            <nav class="nav__links">
+                <a href="#recursos">Recursos</a>
+                <a href="#experiencia">Plataforma</a>
+                <a href="#planos">Planos</a>
+                <a href="#suporte">Suporte</a>
+            </nav>
+
+            <div class="nav__cta">
+                <a href="#login" class="nav__login" aria-label="Login">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+                        <path d="M4 21v-1a8 8 0 0116 0v1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </a>
+                <a href="#criar" class="btn btn--primary">
+                    Criar Conta
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO — Centered ===== -->
+    <section class="hero">
+        <!-- Background lighting from top -->
+        <div class="hero__spotlight"></div>
+        <div class="hero__aurora"></div>
+        <svg class="hero__tracing" viewBox="0 0 1400 800" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+                <linearGradient id="traceGrad1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#5CC815" stop-opacity="0"/>
+                    <stop offset="50%" stop-color="#5CC815" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#5CC815" stop-opacity="0"/>
+                </linearGradient>
+            </defs>
+            <path class="trace-path trace-path--1" d="M200,-50 Q400,150 700,300 T1200,500" stroke="url(#traceGrad1)" stroke-width="1" fill="none"/>
+            <path class="trace-path trace-path--2" d="M1200,-50 Q1000,200 700,350 T200,550" stroke="url(#traceGrad1)" stroke-width="1" fill="none"/>
+        </svg>
+        <div class="container hero__inner">
+            <div class="hero__content">
+                <div class="badge">
+                    <span class="badge__dot"></span>
+                    Plataforma all-in-one · Pagamentos + Gestão + IA
+                </div>
+
+                <h1 class="hero__title">
+                    Venda seus <span class="text-grad">Infoprodutos</span>,
+                    Serviços e Eventos com a
+                    <span class="text-grad">plataforma certa</span> para crescer
+                </h1>
+
+                <p class="hero__lead">
+                    Crie, venda e gerencie seus infoprodutos, serviços e eventos com mais autonomia, performance e segurança.
+                </p>
+
+                <div class="hero__ctas">
+                    <a href="#criar" class="btn btn--primary btn--lg">
+                        <span>COMECE AGORA</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="#demo" class="btn btn--outline btn--lg">
+                        <span class="btn-play-ring">
+                            <svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7L8 5z"/></svg>
+                        </span>
+                        <span>Ver demo</span>
+                    </a>
+                </div>
+
+                <div class="hero__trust">
+                    <div class="trust-stack">
+                        <div class="trust-stack__avatars">
+                            <div class="avatar" style="background:linear-gradient(135deg,#5CC815,#9FDF74)">M</div>
+                            <div class="avatar" style="background:linear-gradient(135deg,#074673,#6C92AC)">J</div>
+                            <div class="avatar" style="background:linear-gradient(135deg,#9FDF74,#5CC815)">A</div>
+                            <div class="avatar" style="background:linear-gradient(135deg,#6C92AC,#074673)">R</div>
+                        </div>
+                        <div class="trust-stack__text">
+                            <strong>+10 mil</strong>
+                            <span>transações por mês</span>
+                        </div>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-rating">
+                        <div class="stars">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#5CC815"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#5CC815"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#5CC815"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#5CC815"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="#5CC815"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+                        </div>
+                        <span>4.9 · avaliação dos produtores</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Dashboard ParPay - Clean dark sofisticada -->
+        <div class="container hero__dashboard-wrap">
+            <div class="hero__dashboard hero__dashboard--dark">
+
+                <!-- Overlay 1: Profile + balance -->
+                <aside class="pp-overlay pp-overlay--profile">
+                    <div class="pp-profile-row">
+                        <div class="pp-profile-circle">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M4 21v-1a8 8 0 0116 0v1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span>Olá, João!</span>
+                    </div>
+                    <strong>Resumo da sua conta</strong>
+                    <h4>R$ 39.555,95</h4>
+                    <a href="#">Ver saques →</a>
+                    <div class="pp-progress">
+                        <div class="pp-progress__bar"></div>
+                    </div>
+                </aside>
+
+                <!-- Overlay 2: Últimas vendas -->
+                <aside class="pp-overlay pp-overlay--sales">
+                    <header>Últimas vendas</header>
+                    <ul>
+                        <li>
+                            <div>
+                                <strong>Curso de Marketing</strong>
+                                <small>Curso de Marketing 1</small>
+                            </div>
+                            <em>há 2 min</em>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>Mentoria Individual</strong>
+                            </div>
+                            <em>há 15 min</em>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>Workshop AO VIVO</strong>
+                            </div>
+                            <em>R$ 199,00</em>
+                        </li>
+                    </ul>
+                    <button class="pp-sales-cta">Ver todas as vendas</button>
+                    <small class="pp-sales-foot">Atualizado agora há pouco</small>
+                </aside>
+
+                <!-- Overlay 3: Seu plano -->
+                <aside class="pp-overlay pp-overlay--plan">
+                    <small>Seu plano</small>
+                    <strong>PRÓ ANUAL + IA</strong>
+                    <span class="pp-plan-valid">Válido até 20/07/2025</span>
+                    <ul>
+                        <li>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="#5CC815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Área de Membros
+                        </li>
+                        <li>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="#5CC815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Hospedagem de Vídeos
+                        </li>
+                        <li>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="#5CC815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Assinaturas e Recorrência
+                        </li>
+                    </ul>
+                    <button>Gerenciar plano</button>
+                </aside>
+
+                <!-- Sidebar dark com labels -->
+                <aside class="pp-sidebar-dark">
+                    <div class="pp-sidebar-dark__brand">
+                        <svg class="pp-side-wordmark" viewBox="0 0 519 94" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Parpay">
+                            <path d="M384.28 0.532357C386.87 0.322958 389.466 0.268759 392.061 0.369271C402.08 0.7621 411.324 5.69004 418.074 12.9669C423.101 8.00006 425.524 6.08422 431.956 3.31361C433.401 5.38335 438.222 16.5814 438.055 19.0333C437.781 22.977 429.921 27.2548 429.088 32.0021C427.048 43.627 427.926 60.3675 428.075 72.2697C425.547 73.7579 414.576 78.5312 411.562 77.8214C409.672 76.0634 408.935 74.7392 407.794 72.4601C404.164 74.6409 400.04 75.65 395.819 76.3576C361.073 82.1856 337.863 43.1032 358.914 15.1554C365.017 7.05772 373.926 1.98186 384.28 0.532357ZM408.222 37.4454C407.592 27.0563 398.7 19.1226 388.311 19.6847C377.829 20.2518 369.81 29.2487 370.445 39.7335C371.079 50.2185 380.125 58.1823 390.598 57.4796C400.978 56.7835 408.852 47.8351 408.222 37.4454Z" fill="#43C834"/>
+                            <path d="M130.122 0.532337C144.163 -1.015 154.168 3.35611 163.998 13.0284C167.354 8.81317 172.952 5.18813 177.981 3.27355C187.903 28.7348 184.294 14.3665 174.562 32.5851C172.793 35.8966 173.904 65.8418 173.72 72.7345C169.472 74.1747 161.15 78.3378 157.247 77.8058C155.023 75.7501 154.892 75.0572 154.149 72.1485C150.239 74.3249 145.963 75.7656 141.534 76.3995C130.964 77.9402 120.926 75.9997 112.32 69.5441C103.971 63.2987 98.4683 53.9693 97.0381 43.6378C95.6693 33.8548 98.5183 23.3091 104.457 15.4464C110.679 7.24634 119.92 1.87646 130.122 0.532337ZM153.769 34.5851C151.565 24.4309 141.594 17.9511 131.426 20.0655C121.129 22.2067 114.553 32.3372 116.784 42.6202C119.016 52.9032 129.199 59.3926 139.456 57.0685C149.585 54.773 155.972 44.7392 153.769 34.5851Z" fill="#fff"/>
+                            <path d="M297.782 0.528407C309.4 -0.248352 318.833 1.53704 328.002 9.34652C335.664 16.0006 340.436 25.3785 341.304 35.4932C342.137 45.7489 338.841 55.9124 332.148 63.725C323.966 73.2524 315.049 76.0782 303.091 77.0022C303.201 71.9594 302.417 64.6966 303.699 59.9844C304.646 57.8019 309.303 56.1055 311.383 55.2419C320.9 51.2929 324.592 39.8297 320.045 30.4808C317.833 25.8489 313.85 22.3037 308.995 20.6448C303.201 18.6632 299.095 19.4969 293.896 22.0634C292.424 22.931 291.045 23.9476 289.78 25.0964C280.603 33.4979 285.37 51.0187 284.123 62.1203C283.449 68.1303 285.269 89.7729 281.568 93.1409C276.911 94.6785 269.024 90.1978 264.301 88.1956C264.45 78.7223 265.468 38.3009 263.353 32.3407C261.56 27.2913 256.15 24.6022 254.55 20.3499C253.175 16.6856 258.586 6.79803 260.119 3.14082C266.393 5.64126 269.522 8.47102 274.505 12.9535C280.131 5.99085 289.093 1.91749 297.782 0.528407Z" fill="#43C834"/>
+                            <path d="M43.352 0.536904C97.62 -5.34654 103.238 75.697 48.5471 76.8185C48.6062 72.008 47.9576 65.3589 49.0582 60.8015C49.727 58.0317 54.5124 56.5941 57.0802 55.3134C62.0863 52.817 64.9409 50.3011 66.7879 44.8197C68.4066 40.0203 68.0392 34.773 65.7683 30.246C63.5094 25.6846 59.5281 22.2112 54.704 20.5933C48.9974 18.6858 44.5571 19.6544 39.4188 22.2103C27.2962 29.9563 29.7737 43.2098 29.586 55.8134C29.4794 62.9461 29.4247 71.4998 29.712 78.5166C30.6069 100.349 24.7315 93.8772 10.2729 88.4139C10.2195 73.9883 10.4729 59.1086 10.576 44.9846C10.68 30.6983 8.49724 30.4338 0.212686 20.0396C-1.20119 18.2662 4.85041 6.14526 6.10744 3.41206C12.3326 5.61317 15.2604 8.42573 20.0338 12.85C27.2751 6.18538 33.2575 2.08161 43.352 0.536904Z" fill="#fff"/>
+                            <path d="M482.819 0C488.067 0.0789103 494.385 -0.127402 499.456 0.604392C500.139 1.66549 501.131 3.88909 501.717 5.10713C501.025 7.392 500.227 9.56754 499.298 11.7629C492.799 27.0768 486.86 42.7923 479.814 57.8598C471.668 71.3358 461.19 75.7905 446.135 77.0112C446.162 73.3623 445.624 64.7113 446.307 61.7418C447.902 54.8052 466.473 54.8052 462.05 44.0871C457.401 32.4626 452.378 20.9791 447.611 9.40487C445.316 3.82737 446.087 0.940755 452.334 0.146803C456.379 -0.0462847 461.085 0.0480538 465.182 0.0326244C467.271 6.51958 471.17 15.0238 473.734 21.8709C476.739 16.0598 480.674 6.21452 482.819 0Z" fill="#43C834"/>
+                            <path d="M240.438 0.540745L245.456 0.270508C245.373 5.17882 246.505 12.1225 244.936 16.709C243.958 19.5669 239.151 20.9159 236.605 22.1511C234.6 23.1228 232.485 24.2566 231.102 26.0574C226.169 32.4761 212.526 67.4562 209.289 76.7646L195.519 76.7628C194.245 76.7465 193.305 76.5966 192.226 75.8842C191.39 75.3314 190.531 74.4925 190.354 73.4622C189.764 70.0299 207.626 28.6399 210.662 22.443C212.1 19.5083 213.758 16.5939 215.742 13.9912C221.381 6.59921 231.397 1.77333 240.438 0.540745Z" fill="#fff"/>
+                            <path d="M512.837 0.167045C515.529 -0.356673 518.142 1.38817 518.688 4.07729C519.239 6.76641 517.521 9.39558 514.838 9.96955C512.119 10.551 509.449 8.80266 508.894 6.07783C508.334 3.353 510.11 0.697816 512.837 0.167045Z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <nav class="pp-sidebar-dark__menu">
+                        <a class="pp-dark-item active">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/></svg>
+                            Dashboard
+                        </a>
+                        <a class="pp-dark-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="1.8"/></svg>
+                            Produtos
+                        </a>
+                        <a class="pp-dark-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2"/><path d="M1 1h4l2.7 13.4a2 2 0 002 1.6h9.7a2 2 0 002-1.6L23 6H6" stroke="currentColor" stroke-width="1.8"/></svg>
+                            Vendas
+                        </a>
+                        <a class="pp-dark-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 12a9 9 0 019-9 9 9 0 016.4 2.6L21 3v6h-6M21 12a9 9 0 01-9 9 9 9 0 01-6.4-2.6L3 21v-6h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Assinaturas
+                        </a>
+                        <a class="pp-dark-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" stroke="currentColor" stroke-width="1.8"/></svg>
+                            Alunos
+                        </a>
+                        <a class="pp-dark-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M2 10h20" stroke="currentColor" stroke-width="1.8"/></svg>
+                            Financeiro
+                        </a>
+                        <a class="pp-dark-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" stroke="currentColor" stroke-width="1.8"/></svg>
+                            Relatórios
+                        </a>
+                        <a class="pp-dark-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 11-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.65 1.65 0 004.6 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06A1.65 1.65 0 009 4.6a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" stroke="currentColor" stroke-width="1.8"/></svg>
+                            Configurações
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Main dark area - ParPay original info -->
+                <main class="pp-main-dark">
+                    <!-- Topbar -->
+                    <header class="pp-topbar-dark pp-topbar-dark--full">
+                        <div>
+                            <h3>Dashboard</h3>
+                            <small>Acompanhe o desempenho do seu negócio em tempo real</small>
+                        </div>
+                        <div class="pp-topbar-dark__filters">
+                            <div class="pp-filter-dark">
+                                <em>Período:</em>
+                                <span>Este mês</span>
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"/></svg>
+                            </div>
+                            <div class="pp-filter-dark">
+                                <em>Produto:</em>
+                                <span>Todos</span>
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"/></svg>
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Top cards row: Valor líquido + Vendas + Aprovação -->
+                    <div class="pp-cards-top-dark">
+                        <article class="pp-card-dark pp-card-dark--featured">
+                            <div class="pp-card-dark__icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M2 10h20" stroke="currentColor" stroke-width="2"/></svg>
+                            </div>
+                            <span class="pp-card-dark__label">Valor líquido</span>
+                            <strong class="pp-card-dark__value">R$ 80.624,48</strong>
+                            <div class="pp-card-dark__glow"></div>
+                        </article>
+                        <article class="pp-card-dark">
+                            <div class="pp-card-dark__icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8M14 7h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <span class="pp-card-dark__label">Vendas</span>
+                            <strong class="pp-card-dark__value pp-card-dark__value--inline">17 <em>nos últimos 30 dias</em></strong>
+                        </article>
+                        <article class="pp-card-dark">
+                            <div class="pp-card-dark__icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M2 10h20" stroke="currentColor" stroke-width="2"/><path d="M7 15h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </div>
+                            <span class="pp-card-dark__label">Aprovação cartão</span>
+                            <strong class="pp-card-dark__value">95.2%</strong>
+                        </article>
+                    </div>
+
+                    <!-- Mid: Faturamento chart + Top produtos -->
+                    <div class="pp-mid-dark">
+                        <article class="pp-chart-dark">
+                            <header>
+                                <h4>Faturamento</h4>
+                                <div class="pp-legend-dark">
+                                    <span><span class="pp-legend-dot pp-legend-dot--green"></span> Vendas</span>
+                                    <span><span class="pp-legend-dot pp-legend-dot--gray"></span> Meta</span>
+                                </div>
+                            </header>
+                            <svg class="pp-chart-svg" viewBox="0 0 600 140" preserveAspectRatio="none">
+                                <defs>
+                                    <linearGradient id="darkChartGrad" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#5CC815" stop-opacity="0.35"/>
+                                        <stop offset="100%" stop-color="#5CC815" stop-opacity="0"/>
+                                    </linearGradient>
+                                </defs>
+                                <line x1="0" y1="30" x2="600" y2="30" stroke="rgba(108,146,172,0.12)" stroke-dasharray="3 3"/>
+                                <line x1="0" y1="70" x2="600" y2="70" stroke="rgba(108,146,172,0.12)" stroke-dasharray="3 3"/>
+                                <line x1="0" y1="110" x2="600" y2="110" stroke="rgba(108,146,172,0.12)" stroke-dasharray="3 3"/>
+                                <!-- Meta line (dashed) -->
+                                <path d="M0,90 L100,80 L200,75 L300,65 L400,60 L500,55 L600,50" stroke="rgba(108,146,172,0.5)" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+                                <!-- Vendas area -->
+                                <path d="M0,115 L60,105 L120,90 L180,95 L240,75 L300,85 L360,65 L420,50 L480,40 L540,30 L600,20 L600,140 L0,140 Z" fill="url(#darkChartGrad)"/>
+                                <path d="M0,115 L60,105 L120,90 L180,95 L240,75 L300,85 L360,65 L420,50 L480,40 L540,30 L600,20" stroke="#5CC815" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                                <circle cx="600" cy="20" r="4" fill="#5CC815"/>
+                                <circle cx="600" cy="20" r="9" fill="#5CC815" opacity="0.3"/>
+                            </svg>
+                            <div class="pp-chart-axis-dark">
+                                <span>01</span><span>05</span><span>10</span><span>15</span><span>20</span><span>25</span><span>30</span>
+                            </div>
+                        </article>
+
+                        <article class="pp-products-dark">
+                            <header>
+                                <h4>Top produtos</h4>
+                                <a href="#">Ver todos</a>
+                            </header>
+                            <ul>
+                                <li>
+                                    <span class="pp-prod-dark__cover" style="background:linear-gradient(135deg,#9FDF74,#5CC815)">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V3H6.5A2.5 2.5 0 004 5.5v14z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M4 19.5A2.5 2.5 0 016.5 22H20" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+                                    </span>
+                                    <div>
+                                        <strong>Curso de Marketing</strong>
+                                        <small>12 vendas</small>
+                                    </div>
+                                    <em>R$ 24.5K</em>
+                                </li>
+                                <li>
+                                    <span class="pp-prod-dark__cover" style="background:linear-gradient(135deg,#5CC815,#2D5F0B)">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#fff" stroke-width="2"/><path d="M4 21v-1a8 8 0 0116 0v1" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+                                    </span>
+                                    <div>
+                                        <strong>Mentoria 1:1</strong>
+                                        <small>3 vendas</small>
+                                    </div>
+                                    <em>R$ 12.0K</em>
+                                </li>
+                                <li>
+                                    <span class="pp-prod-dark__cover" style="background:linear-gradient(135deg,#6C92AC,#074673)">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#fff" stroke-width="2"/><path d="M8 21h8M12 17v4" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+                                    </span>
+                                    <div>
+                                        <strong>Workshop</strong>
+                                        <small>2 vendas</small>
+                                    </div>
+                                    <em>R$ 1.2K</em>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <!-- Bottom mini cards -->
+                    <div class="pp-cards-bottom-dark">
+                        <article class="pp-mini-dark">
+                            <div class="pp-mini-dark__icon">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 12a9 9 0 019-9 9 9 0 016.4 2.6L21 3M3 12l3 3M21 12a9 9 0 01-9 9 9 9 0 01-6.4-2.6L3 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </div>
+                            <span>Reembolso</span>
+                            <strong>5.6%</strong>
+                        </article>
+                        <article class="pp-mini-dark">
+                            <div class="pp-mini-dark__icon">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M9 8h6M9 12h4M9 16h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </div>
+                            <span>Conversão Pix</span>
+                            <strong>0%</strong>
+                        </article>
+                        <article class="pp-mini-dark">
+                            <div class="pp-mini-dark__icon">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </div>
+                            <span>Chargeback</span>
+                            <strong>0%</strong>
+                        </article>
+                        <article class="pp-mini-dark">
+                            <div class="pp-mini-dark__icon">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M12 4v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </div>
+                            <span>Pix gerados</span>
+                            <strong>10</strong>
+                        </article>
+                    </div>
+                </main>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES STRIP ===== -->
+    <section class="features-strip">
+        <div class="container">
+            <div class="features-strip__grid">
+                <div class="feature-mini">
+                    <div class="feature-mini__icon feature-mini__icon--dark">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#5CC815" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div>
+                        <h4>Proteção de ponta a antifraude</h4>
+                        <p>Segurança em cada etapa da venda.</p>
+                    </div>
+                </div>
+                <div class="feature-mini">
+                    <div class="feature-mini__icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="6" y="2" width="12" height="20" rx="2" stroke="#fff" stroke-width="2"/><path d="M10 6h4M12 18h.01" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M9 11l2 2 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div>
+                        <h4>Taxas mais baixas</h4>
+                        <p>Mais lucro para você.</p>
+                    </div>
+                </div>
+                <div class="feature-mini">
+                    <div class="feature-mini__icon feature-mini__icon--dark">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div>
+                        <h4>Parcele suas vendas em até 21x</h4>
+                        <p>Mais flexibilidade para seus clientes.</p>
+                    </div>
+                </div>
+                <div class="feature-mini">
+                    <div class="feature-mini__icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="6" width="20" height="14" rx="2" stroke="#fff" stroke-width="2"/><path d="M2 10h20M7 16h2" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <div>
+                        <h4>Recebimento Rápido</h4>
+                        <p>Recebe em d+7 sem taxa de antecipação melhorando seu fluxo de caixa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RECURSOS COMPLETOS ===== -->
+    <section class="recursos" id="recursos">
+        <div class="recursos__bg-pattern"></div>
+        <div class="recursos__bg-glow"></div>
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <span class="eyebrow eyebrow--light">RECURSOS COMPLETOS</span>
+                    <h2 class="section-title section-title--light">
+                        Tudo o que você precisa
+                        <br/>para <span class="text-grad">vender mais</span>
+                    </h2>
+                </div>
+                <p class="section-lead section-lead--light">
+                    Da criação ao pós-venda: ferramentas que dão mais poder para você focar no que realmente importa: seus alunos.
+                </p>
+            </div>
+
+            <div class="recursos__grid">
+
+                <!-- Card 1: Área de Membros como dashboard de cursos -->
+                <article class="recurso-card">
+                    <div class="recurso-card__visual rc-visual-members">
+                        <div class="rc-members-dash">
+                            <div class="rc-members-dash__header">
+                                <span class="rc-members-dash__title">Meus cursos</span>
+                                <span class="rc-members-dash__count">12</span>
+                            </div>
+                            <div class="rc-members-dash__featured">
+                                <div class="rc-members-dash__thumb">
+                                    <span class="rc-members-dash__play">
+                                        <svg width="10" height="10" viewBox="0 0 24 24" fill="#0B1118"><path d="M8 5v14l11-7L8 5z"/></svg>
+                                    </span>
+                                </div>
+                                <div class="rc-members-dash__info">
+                                    <small>EM ANDAMENTO</small>
+                                    <strong>Marketing Digital</strong>
+                                    <div class="rc-members-dash__progress">
+                                        <div class="rc-members-dash__progress-bar" style="width:68%"></div>
+                                    </div>
+                                    <span class="rc-members-dash__percent">68% concluído</span>
+                                </div>
+                            </div>
+                            <div class="rc-members-dash__list">
+                                <div class="rc-members-dash__item">
+                                    <div class="rc-members-dash__mini" style="background:linear-gradient(135deg,#5CC815,#2D5F0B)"></div>
+                                    <span>Copywriting</span>
+                                    <em>92%</em>
+                                </div>
+                                <div class="rc-members-dash__item">
+                                    <div class="rc-members-dash__mini" style="background:linear-gradient(135deg,#6C92AC,#074673)"></div>
+                                    <span>Tráfego Pago</span>
+                                    <em>45%</em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recurso-card__content">
+                        <h3>Área de membros Premium</h3>
+                        <p>Ambiente moderno, seguro e personalizável para seus alunos.</p>
+                    </div>
+                </article>
+
+                <!-- Card 2: Hospedagem de Vídeos como dashboard library -->
+                <article class="recurso-card recurso-card--wide">
+                    <div class="recurso-card__visual rc-visual-video">
+                        <div class="rc-video-lib">
+                            <div class="rc-video-lib__featured">
+                                <span class="rc-video-lib__play">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#0B1118"><path d="M8 5v14l11-7L8 5z"/></svg>
+                                </span>
+                                <span class="rc-video-lib__quality">4K · HDR</span>
+                                <span class="rc-video-lib__duration">24:30</span>
+                                <div class="rc-video-lib__progress">
+                                    <div class="rc-video-lib__progress-bar"></div>
+                                </div>
+                            </div>
+                            <div class="rc-video-lib__grid">
+                                <div class="rc-video-lib__thumb rc-video-lib__thumb--1">
+                                    <span class="rc-video-lib__mini-play">
+                                        <svg width="8" height="8" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7L8 5z"/></svg>
+                                    </span>
+                                    <span class="rc-video-lib__dur">08:42</span>
+                                </div>
+                                <div class="rc-video-lib__thumb rc-video-lib__thumb--2">
+                                    <span class="rc-video-lib__mini-play">
+                                        <svg width="8" height="8" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7L8 5z"/></svg>
+                                    </span>
+                                    <span class="rc-video-lib__dur">12:15</span>
+                                </div>
+                                <div class="rc-video-lib__thumb rc-video-lib__thumb--3">
+                                    <span class="rc-video-lib__mini-play">
+                                        <svg width="8" height="8" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7L8 5z"/></svg>
+                                    </span>
+                                    <span class="rc-video-lib__dur">06:30</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recurso-card__content">
+                        <h3>Hospedagem de vídeos</h3>
+                        <p>Vídeos com performance e estabilidade.</p>
+                    </div>
+                </article>
+
+                <!-- Card 3: Segurança total -->
+                <article class="recurso-card">
+                    <div class="recurso-card__visual rc-visual-security">
+                        <div class="rc-shield">
+                            <div class="rc-shield__rings">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="rc-shield__icon">
+                                <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L4 5v7c0 5.5 3.5 9.5 8 11 4.5-1.5 8-5.5 8-11V5l-8-3z" fill="url(#shieldGrad)" stroke="#fff" stroke-width="0.5"/>
+                                    <path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <defs>
+                                        <linearGradient id="shieldGrad" x1="4" y1="2" x2="20" y2="23" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#9FDF74"/>
+                                            <stop offset="0.6" stop-color="#5CC815"/>
+                                            <stop offset="1" stop-color="#2D5F0B"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="rc-security-tags">
+                            <span class="rc-tag">LGPD</span>
+                            <span class="rc-tag">SSL</span>
+                            <span class="rc-tag">PCI DSS</span>
+                        </div>
+                    </div>
+                    <div class="recurso-card__content">
+                        <h3>Segurança total</h3>
+                        <p>Proteção de conteúdo, antifraude e conformidade com a lei LGPD.</p>
+                    </div>
+                </article>
+
+                <!-- Card 4: Cupons e descontos -->
+                <article class="recurso-card">
+                    <div class="recurso-card__visual rc-visual-coupon">
+                        <div class="rc-coupons">
+                            <div class="rc-coupon rc-coupon--1">
+                                <div class="rc-coupon__left">
+                                    <span class="rc-coupon__tag">DESCONTO</span>
+                                    <strong>30% OFF</strong>
+                                </div>
+                                <div class="rc-coupon__divider">
+                                    <span></span><span></span><span></span><span></span>
+                                </div>
+                                <div class="rc-coupon__right">
+                                    <small>CUPOM</small>
+                                    <code>BLACK30</code>
+                                </div>
+                            </div>
+                            <div class="rc-coupon rc-coupon--2">
+                                <div class="rc-coupon__left">
+                                    <span class="rc-coupon__tag">PROMO</span>
+                                    <strong>50% OFF</strong>
+                                </div>
+                                <div class="rc-coupon__divider">
+                                    <span></span><span></span><span></span><span></span>
+                                </div>
+                                <div class="rc-coupon__right">
+                                    <small>CUPOM</small>
+                                    <code>VIP50</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recurso-card__content">
+                        <h3>Cupons e descontos</h3>
+                        <p>Campanhas personalizadas que aumentam suas vendas.</p>
+                    </div>
+                </article>
+
+                <!-- Card 5: Assinaturas e recorrência -->
+                <article class="recurso-card">
+                    <div class="recurso-card__visual rc-visual-subs">
+                        <div class="rc-subs">
+                            <div class="rc-subs__header">
+                                <div>
+                                    <small>MRR</small>
+                                    <strong>R$ 24.580</strong>
+                                </div>
+                                <span class="rc-subs__up">+12%</span>
+                            </div>
+                            <svg class="rc-subs__chart" viewBox="0 0 200 60" preserveAspectRatio="none">
+                                <defs>
+                                    <linearGradient id="subsArea" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#5CC815" stop-opacity="0.5"/>
+                                        <stop offset="100%" stop-color="#5CC815" stop-opacity="0"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M0,50 L20,45 L40,42 L60,35 L80,38 L100,28 L120,30 L140,22 L160,18 L180,12 L200,8 L200,60 L0,60 Z" fill="url(#subsArea)"/>
+                                <path d="M0,50 L20,45 L40,42 L60,35 L80,38 L100,28 L120,30 L140,22 L160,18 L180,12 L200,8" stroke="#5CC815" stroke-width="2" fill="none"/>
+                                <circle cx="200" cy="8" r="3" fill="#5CC815"/>
+                            </svg>
+                            <div class="rc-subs__cycle">
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M3 12a9 9 0 019-9 9 9 0 016.4 2.6L21 3M3 12l3 3M21 12a9 9 0 01-9 9 9 9 0 01-6.4-2.6L3 21m18-9l-3-3" stroke="#5CC815" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Renovação automática
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recurso-card__content">
+                        <h3>Assinaturas e recorrência</h3>
+                        <p>Crie produtos de assinatura e garanta receita recorrente.</p>
+                    </div>
+                </article>
+
+                <!-- Card 6: Ticketeria — formato ticket real -->
+                <article class="recurso-card">
+                    <div class="recurso-card__visual rc-visual-ticket">
+                        <div class="rc-real-ticket">
+                            <div class="rc-real-ticket__stripe"></div>
+                            <div class="rc-real-ticket__body">
+                                <div class="rc-real-ticket__head">
+                                    <div>
+                                        <span class="rc-real-ticket__label">EVENTO</span>
+                                        <strong class="rc-real-ticket__name">Workshop AO VIVO</strong>
+                                    </div>
+                                    <span class="rc-real-ticket__type">VIP</span>
+                                </div>
+                                <div class="rc-real-ticket__grid">
+                                    <div>
+                                        <small>DATA</small>
+                                        <strong>15 MAI</strong>
+                                    </div>
+                                    <div>
+                                        <small>HORA</small>
+                                        <strong>20:00</strong>
+                                    </div>
+                                    <div>
+                                        <small>LOTE</small>
+                                        <strong>1º</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rc-real-ticket__perforate">
+                                <span></span><span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <div class="rc-real-ticket__stub">
+                                <div class="rc-real-qr">
+                                    <div class="rc-real-qr__scan"></div>
+                                    <div class="rc-real-qr__finder rc-real-qr__finder--tl"></div>
+                                    <div class="rc-real-qr__finder rc-real-qr__finder--tr"></div>
+                                    <div class="rc-real-qr__finder rc-real-qr__finder--bl"></div>
+                                    <div class="rc-real-qr__dots">
+                                        <span></span><span></span><span></span><span></span>
+                                        <span></span><span></span><span></span><span></span>
+                                        <span></span><span></span><span></span><span></span>
+                                        <span></span><span></span><span></span><span></span>
+                                        <span></span><span></span><span></span><span></span>
+                                        <span></span><span></span><span></span><span></span>
+                                        <span></span><span></span><span></span><span></span>
+                                        <span></span><span></span><span></span><span></span>
+                                    </div>
+                                </div>
+                                <span class="rc-real-ticket__id">#PRP-0142</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recurso-card__content">
+                        <h3>Ticketeria</h3>
+                        <p>Crie e gerencie a venda de eventos gerando automaticamente ingressos com QR Code.</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCIA COMPLETA ===== -->
+    <section class="experiencia" id="experiencia">
+        <div class="experiencia__bg-pattern"></div>
+        <div class="experiencia__bg-glow experiencia__bg-glow--1"></div>
+        <div class="experiencia__bg-glow experiencia__bg-glow--2"></div>
+        <div class="container">
+            <div class="experiencia__head">
+                <span class="eyebrow eyebrow--light">ESCALE NA PRÁTICA</span>
+                <h2 class="section-title section-title--light">
+                    Experiência Completa para <span class="text-grad">Produtores e Clientes</span>
+                </h2>
+                <p class="experiencia__lead">
+                    Uma plataforma pensada para facilitar sua rotina e proporcionar a melhor experiência de ensino.
+                </p>
+            </div>
+
+            <div class="experiencia__bento">
+                <!-- Bento card 1: Criação simples (large) -->
+                <article class="bento bento--1">
+                    <div class="bento__visual">
+                        <div class="bento-product">
+                            <div class="bento-product__head">
+                                <div class="bento-product__cover">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <div class="bento-product__info">
+                                    <small>NOVO PRODUTO</small>
+                                    <strong>Curso de Marketing Digital</strong>
+                                </div>
+                                <span class="bento-product__status">
+                                    <span class="dot dot--success"></span>
+                                    Publicado
+                                </span>
+                            </div>
+                            <div class="bento-product__fields">
+                                <div class="bento-product__field">
+                                    <span>Preço</span>
+                                    <strong>R$ 497,00</strong>
+                                </div>
+                                <div class="bento-product__field">
+                                    <span>Parcelas</span>
+                                    <strong>até 21x</strong>
+                                </div>
+                                <div class="bento-product__field">
+                                    <span>Alunos</span>
+                                    <strong>3.678</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento__content">
+                        <div class="bento__icon-pill">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14m-7-7h14" stroke="#5CC815" stroke-width="2.5" stroke-linecap="round"/></svg>
+                            Produtor
+                        </div>
+                        <h3>Criação e gestão simples de produtos</h3>
+                        <p>Crie, edite e publique seus infoprodutos em minutos com uma interface intuitiva.</p>
+                    </div>
+                </article>
+
+                <!-- Bento card 2: Dashboard completo -->
+                <article class="bento bento--2">
+                    <div class="bento__visual">
+                        <div class="bento-dash">
+                            <div class="bento-dash__row">
+                                <span>Conversão</span>
+                                <strong>18,6%</strong>
+                            </div>
+                            <div class="bento-dash__row">
+                                <span>Vendas hoje</span>
+                                <strong>R$ 4.297</strong>
+                            </div>
+                            <div class="bento-dash__bars">
+                                <span style="height:30%"></span>
+                                <span style="height:50%"></span>
+                                <span style="height:42%"></span>
+                                <span style="height:70%"></span>
+                                <span style="height:60%"></span>
+                                <span style="height:85%"></span>
+                                <span style="height:95%"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento__content">
+                        <div class="bento__icon-pill">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="9" rx="1" stroke="#5CC815" stroke-width="2"/><rect x="14" y="3" width="7" height="5" rx="1" stroke="#5CC815" stroke-width="2"/><rect x="14" y="12" width="7" height="9" rx="1" stroke="#5CC815" stroke-width="2"/><rect x="3" y="16" width="7" height="5" rx="1" stroke="#5CC815" stroke-width="2"/></svg>
+                            Analytics
+                        </div>
+                        <h3>Dashboard completo e intuitivo</h3>
+                        <p>Acompanhe vendas, alunos e métricas em tempo real numa visão unificada.</p>
+                    </div>
+                </article>
+
+                <!-- Bento card 3: Suporte humano -->
+                <article class="bento bento--3">
+                    <div class="bento__visual">
+                        <div class="bento-support">
+                            <div class="bento-support__msg bento-support__msg--user">
+                                <div class="bento-support__avatar" style="background:linear-gradient(135deg,#9FDF74,#5CC815)"></div>
+                                <div class="bento-support__bubble">Como configuro minha área de membros?</div>
+                            </div>
+                            <div class="bento-support__msg bento-support__msg--agent">
+                                <div class="bento-support__bubble bento-support__bubble--agent">
+                                    Claro! Vou te guiar passo a passo agora mesmo 🚀
+                                </div>
+                                <div class="bento-support__avatar bento-support__avatar--brand">
+                                    <svg width="14" height="14" viewBox="0 0 115 118" fill="none"><path d="M34.85 0c.51 0 .26 0 .75.28 2.49 6.8 5.78 13.3 8.2 20.15 2.15 6.1-3.22 8.91-7.1 12.69-10.14 9.84-7.92 25.09-7.93 38.02l.05 38.38c-5.76 2.54-13.41 5.82-19.26 7.91-5.87 1.08-9.39-1.68-9.5-7.7v-30.18l.02-20.25c0-3.8 0-7.63.01-11.41.04-12.39-.86-23.19 3.81-35.01C9.88 16.98 20.04 6.61 34.85 0z" fill="#fff"/><path d="M91.42 52.38c5.57-.43 16.6-.11 22.6-.11-.45 8.84-1.25 15.2-4.95 23.42-6.66 14.8-17.54 24.5-32.46 30.35-6.34 2.34-13.05 3.52-19.81 3.5l.02-14.44c0-8.9-1.52-12.88 8.3-15.64 8.86-2.5 16.18-9.93 18.71-18.75 1.36-4.72 2.53-7.22 7.6-8.33z" fill="#43C834"/></svg>
+                                </div>
+                            </div>
+                            <div class="bento-support__typing">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento__content">
+                        <div class="bento__icon-pill">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.4 8.4 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.4 8.4 0 01-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.4 8.4 0 013.8-.9h.5a8.5 8.5 0 018 8v.5z" stroke="#5CC815" stroke-width="2"/></svg>
+                            24/7
+                        </div>
+                        <h3>Suporte humano de verdade</h3>
+                        <p>Time real respondendo rápido, sem robôs e sem espera infinita.</p>
+                    </div>
+                </article>
+
+                <!-- Bento card 4: CTA — formato de signup/cadastro -->
+                <article class="bento bento--cta">
+                    <div class="bento-signup">
+                        <div class="bento-signup__pattern"></div>
+                        <div class="bento-signup__left">
+                            <span class="bento-signup__eyebrow">CADASTRO EM 30 SEGUNDOS</span>
+                            <h3>Comece em <span class="text-grad">menos de 5 minutos</span></h3>
+                            <p>Sem fidelidade, sem mensalidade. Só ganha quem vende.</p>
+                            <ul class="bento-signup__steps">
+                                <li>
+                                    <span class="bento-signup__num">1</span>
+                                    <div>
+                                        <strong>Crie sua conta</strong>
+                                        <small>E-mail e dados básicos</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="bento-signup__num">2</span>
+                                    <div>
+                                        <strong>Configure seu produto</strong>
+                                        <small>Curso, mentoria ou evento</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="bento-signup__num">3</span>
+                                    <div>
+                                        <strong>Comece a vender</strong>
+                                        <small>Link de checkout pronto</small>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bento-signup__form">
+                            <div class="bento-signup__form-header">
+                                <svg width="24" height="24" viewBox="-10 -10 135 138" fill="none">
+                                    <path d="M34.85 0c.51 0 .26 0 .75.28 2.49 6.8 5.78 13.3 8.2 20.15 2.15 6.1-3.22 8.91-7.1 12.69-10.14 9.84-7.92 25.09-7.93 38.02l.05 38.38c-5.76 2.54-13.41 5.82-19.26 7.91-5.87 1.08-9.39-1.68-9.5-7.7v-30.18l.02-20.25c0-3.8 0-7.63.01-11.41.04-12.39-.86-23.19 3.81-35.01C9.88 16.98 20.04 6.61 34.85 0z" fill="#fff"/>
+                                    <path d="M91.42 52.38c5.57-.43 16.6-.11 22.6-.11-.45 8.84-1.25 15.2-4.95 23.42-6.66 14.8-17.54 24.5-32.46 30.35-6.34 2.34-13.05 3.52-19.81 3.5l.02-14.44c0-8.9-1.52-12.88 8.3-15.64 8.86-2.5 16.18-9.93 18.71-18.75 1.36-4.72 2.53-7.22 7.6-8.33z" fill="#43C834"/>
+                                </svg>
+                                <h4>Criar conta grátis</h4>
+                            </div>
+                            <div class="bento-signup__field">
+                                <label>Seu nome</label>
+                                <div class="bento-signup__input">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 21v-1a6 6 0 016-6h4a6 6 0 016 6v1" stroke="currentColor" stroke-width="2"/></svg>
+                                    <span>João Costa</span>
+                                </div>
+                            </div>
+                            <div class="bento-signup__field">
+                                <label>Seu melhor e-mail</label>
+                                <div class="bento-signup__input bento-signup__input--active">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M2 7l10 7 10-7" stroke="currentColor" stroke-width="2"/></svg>
+                                    <span>joao@email.com<em class="bento-signup__caret"></em></span>
+                                </div>
+                            </div>
+                            <a href="#pratica" class="btn btn--primary btn--lg btn--block">
+                                VER NA PRÁTICA
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                            <small class="bento-signup__foot">
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="#5CC815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Sem cartão · Sem compromisso
+                            </small>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+            <div class="experiencia__visual" style="display:none">
+                <!-- Sidebar dashboard mockup -->
+                <div class="exp-dash">
+                    <div class="exp-dash__brand">
+                        <div class="exp-dash__logo">
+                            <svg viewBox="0 0 115 118" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M34.8526 0.0164865C35.3649 -0.0100135 35.1082 -0.0462642 35.6024 0.278236C38.0889 7.08049 41.3772 13.585 43.7937 20.432C45.9452 26.5275 40.5802 29.3447 36.6929 33.1212C26.5579 42.9677 28.7729 58.2125 28.7704 71.145L28.8166 109.524C23.0566 112.065 15.4034 115.342 9.55639 117.436C3.68864 118.517 0.171645 115.748 0.0628951 109.73C-0.00285494 106.101 0.0323919 102.46 0.0408919 98.8302L0.0591414 78.5787C0.0553914 74.7812 0.0361421 70.95 0.0473921 67.1707C0.0841421 54.781 -0.819359 43.9832 3.86514 32.162C9.88114 16.9797 20.0429 6.61199 34.8526 0.0164865Z" fill="#014572"/>
+                                <path d="M91.4224 52.3836C96.9924 51.9503 108.02 52.2683 114.02 52.2748C113.57 61.1196 112.77 67.4728 109.07 75.6923C102.407 90.4948 91.5324 100.197 76.6074 106.048C70.2661 108.384 63.5579 109.567 56.7996 109.541L56.8171 95.1051C56.8126 86.2101 55.2976 82.2278 65.1094 79.4653C73.9774 76.9683 81.2949 69.5323 83.8274 60.7148C85.1824 55.9946 86.3599 53.4948 91.4224 52.3836Z" fill="#43C834"/>
+                            </svg>
+                            <svg class="exp-dash__wordmark" viewBox="0 0 519 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M384.28 0.532357C386.87 0.322958 389.466 0.268759 392.061 0.369271C402.08 0.7621 411.324 5.69004 418.074 12.9669C423.101 8.00006 425.524 6.08422 431.956 3.31361C433.401 5.38335 438.222 16.5814 438.055 19.0333C437.781 22.977 429.921 27.2548 429.088 32.0021C427.048 43.627 427.926 60.3675 428.075 72.2697C425.547 73.7579 414.576 78.5312 411.562 77.8214C409.672 76.0634 408.935 74.7392 407.794 72.4601C404.164 74.6409 400.04 75.65 395.819 76.3576C361.073 82.1856 337.863 43.1032 358.914 15.1554C365.017 7.05772 373.926 1.98186 384.28 0.532357ZM408.222 37.4454C407.592 27.0563 398.7 19.1226 388.311 19.6847C377.829 20.2518 369.81 29.2487 370.445 39.7335C371.079 50.2185 380.125 58.1823 390.598 57.4796C400.978 56.7835 408.852 47.8351 408.222 37.4454Z" fill="#43C834"/>
+                                <path d="M130.122 0.532337C144.163 -1.015 154.168 3.35611 163.998 13.0284C167.354 8.81317 172.952 5.18813 177.981 3.27355C187.903 28.7348 184.294 14.3665 174.562 32.5851C172.793 35.8966 173.904 65.8418 173.72 72.7345C169.472 74.1747 161.15 78.3378 157.247 77.8058C155.023 75.7501 154.892 75.0572 154.149 72.1485C150.239 74.3249 145.963 75.7656 141.534 76.3995C130.964 77.9402 120.926 75.9997 112.32 69.5441C103.971 63.2987 98.4683 53.9693 97.0381 43.6378C95.6693 33.8548 98.5183 23.3091 104.457 15.4464C110.679 7.24634 119.92 1.87646 130.122 0.532337ZM153.769 34.5851C151.565 24.4309 141.594 17.9511 131.426 20.0655C121.129 22.2067 114.553 32.3372 116.784 42.6202C119.016 52.9032 129.199 59.3926 139.456 57.0685C149.585 54.773 155.972 44.7392 153.769 34.5851Z" fill="#014572"/>
+                                <path d="M297.782 0.528407C309.4 -0.248352 318.833 1.53704 328.002 9.34652C335.664 16.0006 340.436 25.3785 341.304 35.4932C342.137 45.7489 338.841 55.9124 332.148 63.725C323.966 73.2524 315.049 76.0782 303.091 77.0022C303.201 71.9594 302.417 64.6966 303.699 59.9844C304.646 57.8019 309.303 56.1055 311.383 55.2419C320.9 51.2929 324.592 39.8297 320.045 30.4808C317.833 25.8489 313.85 22.3037 308.995 20.6448C303.201 18.6632 299.095 19.4969 293.896 22.0634C292.424 22.931 291.045 23.9476 289.78 25.0964C280.603 33.4979 285.37 51.0187 284.123 62.1203C283.449 68.1303 285.269 89.7729 281.568 93.1409C276.911 94.6785 269.024 90.1978 264.301 88.1956C264.45 78.7223 265.468 38.3009 263.353 32.3407C261.56 27.2913 256.15 24.6022 254.55 20.3499C253.175 16.6856 258.586 6.79803 260.119 3.14082C266.393 5.64126 269.522 8.47102 274.505 12.9535C280.131 5.99085 289.093 1.91749 297.782 0.528407Z" fill="#43C834"/>
+                                <path d="M43.352 0.536904C97.62 -5.34654 103.238 75.697 48.5471 76.8185C48.6062 72.008 47.9576 65.3589 49.0582 60.8015C49.727 58.0317 54.5124 56.5941 57.0802 55.3134C62.0863 52.817 64.9409 50.3011 66.7879 44.8197C68.4066 40.0203 68.0392 34.773 65.7683 30.246C63.5094 25.6846 59.5281 22.2112 54.704 20.5933C48.9974 18.6858 44.5571 19.6544 39.4188 22.2103C27.2962 29.9563 29.7737 43.2098 29.586 55.8134C29.4794 62.9461 29.4247 71.4998 29.712 78.5166C30.6069 100.349 24.7315 93.8772 10.2729 88.4139C10.2195 73.9883 10.4729 59.1086 10.576 44.9846C10.68 30.6983 8.49724 30.4338 0.212686 20.0396C-1.20119 18.2662 4.85041 6.14526 6.10744 3.41206C12.3326 5.61317 15.2604 8.42573 20.0338 12.85C27.2751 6.18538 33.2575 2.08161 43.352 0.536904Z" fill="#014572"/>
+                                <path d="M482.819 0C488.067 0.0789103 494.385 -0.127402 499.456 0.604392C500.139 1.66549 501.131 3.88909 501.717 5.10713C501.025 7.392 500.227 9.56754 499.298 11.7629C492.799 27.0768 486.86 42.7923 479.814 57.8598C471.668 71.3358 461.19 75.7905 446.135 77.0112C446.162 73.3623 445.624 64.7113 446.307 61.7418C447.902 54.8052 466.473 54.8052 462.05 44.0871C457.401 32.4626 452.378 20.9791 447.611 9.40487C445.316 3.82737 446.087 0.940755 452.334 0.146803C456.379 -0.0462847 461.085 0.0480538 465.182 0.0326244C467.271 6.51958 471.17 15.0238 473.734 21.8709C476.739 16.0598 480.674 6.21452 482.819 0Z" fill="#43C834"/>
+                                <path d="M240.438 0.540745L245.456 0.270508C245.373 5.17882 246.505 12.1225 244.936 16.709C243.958 19.5669 239.151 20.9159 236.605 22.1511C234.6 23.1228 232.485 24.2566 231.102 26.0574C226.169 32.4761 212.526 67.4562 209.289 76.7646L195.519 76.7628C194.245 76.7465 193.305 76.5966 192.226 75.8842C191.39 75.3314 190.531 74.4925 190.354 73.4622C189.764 70.0299 207.626 28.6399 210.662 22.443C212.1 19.5083 213.758 16.5939 215.742 13.9912C221.381 6.59921 231.397 1.77333 240.438 0.540745Z" fill="#014572"/>
+                                <path d="M512.837 0.167045C515.529 -0.356673 518.142 1.38817 518.688 4.07729C519.239 6.76641 517.521 9.39558 514.838 9.96955C512.119 10.551 509.449 8.80266 508.894 6.07783C508.334 3.353 510.11 0.697816 512.837 0.167045Z" fill="#014572"/>
+                            </svg>
+                            <em>academy</em>
+                        </div>
+                    </div>
+                    <h5>Dashboard</h5>
+                    <a class="exp-dash__row active">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Produtos <em>50</em>
+                    </a>
+                    <h5>Vendas</h5>
+                    <a class="exp-dash__row">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2"/><path d="M1 1h4l2.7 13.4a2 2 0 002 1.6h9.7a2 2 0 002-1.6L23 6H6" stroke="currentColor" stroke-width="2"/></svg>
+                        Vendas <em>98</em>
+                    </a>
+                    <h5>Alunos</h5>
+                    <a class="exp-dash__row">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" stroke="currentColor" stroke-width="2"/></svg>
+                        Alunos
+                    </a>
+                    <a class="exp-dash__row">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M9 7v10M15 7v10" stroke="currentColor" stroke-width="2"/></svg>
+                        Hospedagem
+                    </a>
+                    <a class="exp-dash__row">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.4 8.4 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.4 8.4 0 01-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.4 8.4 0 013.8-.9h.5a8.5 8.5 0 018 8v.5z" stroke="currentColor" stroke-width="2"/></svg>
+                        Comunicação
+                    </a>
+                    <a class="exp-dash__row">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="6" width="20" height="12" rx="2" stroke="currentColor" stroke-width="2"/><path d="M2 10h20" stroke="currentColor" stroke-width="2"/></svg>
+                        Financeiro
+                    </a>
+                    <h5>Financeiro</h5>
+                    <a class="exp-dash__row">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" stroke="currentColor" stroke-width="2"/></svg>
+                        Relatórios
+                    </a>
+                    <a class="exp-dash__row">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/></svg>
+                        Configurações
+                    </a>
+                </div>
+
+                <!-- Video preview -->
+                <div class="exp-video">
+                    <div class="exp-video__player">
+                        <div class="exp-video__woman">
+                            <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                                <defs>
+                                    <linearGradient id="bgWoman" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0" stop-color="#2a2a2a"/>
+                                        <stop offset="1" stop-color="#1a1a1a"/>
+                                    </linearGradient>
+                                    <radialGradient id="lightWoman" cx="0.5" cy="0.4" r="0.6">
+                                        <stop offset="0" stop-color="#3a3a3a"/>
+                                        <stop offset="1" stop-color="#1a1a1a"/>
+                                    </radialGradient>
+                                </defs>
+                                <rect width="320" height="200" fill="url(#lightWoman)"/>
+                                <!-- Hair back -->
+                                <path d="M100 40 Q 90 80 100 130 L 120 200 L 200 200 L 220 130 Q 230 80 220 40 Q 200 20 160 20 Q 120 20 100 40z" fill="#3d2817"/>
+                                <!-- Body shirt -->
+                                <path d="M110 150 Q 100 170 100 200 L 220 200 Q 220 170 210 150 Q 190 140 160 140 Q 130 140 110 150z" fill="#1a1a1a"/>
+                                <!-- Neck -->
+                                <rect x="148" y="115" width="24" height="25" fill="#E8B894"/>
+                                <!-- Face -->
+                                <ellipse cx="160" cy="90" rx="32" ry="38" fill="#E8B894"/>
+                                <!-- Hair front -->
+                                <path d="M128 70 Q 135 50 160 48 Q 185 50 192 70 Q 195 60 188 50 Q 175 30 160 30 Q 145 30 132 50 Q 125 60 128 70z" fill="#3d2817"/>
+                                <!-- Eyes -->
+                                <ellipse cx="148" cy="85" rx="2.5" ry="3" fill="#2a1a0a"/>
+                                <ellipse cx="172" cy="85" rx="2.5" ry="3" fill="#2a1a0a"/>
+                                <!-- Eyebrows -->
+                                <path d="M143 78 Q 148 76 153 78" stroke="#3d2817" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <path d="M167 78 Q 172 76 177 78" stroke="#3d2817" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <!-- Nose -->
+                                <path d="M160 90 Q 158 100 160 105 Q 162 100 160 90" fill="#d4a07d" opacity="0.4"/>
+                                <!-- Smile -->
+                                <path d="M150 108 Q 160 116 170 108" stroke="#a05050" stroke-width="2" fill="#e89090" stroke-linecap="round"/>
+                                <!-- Earrings -->
+                                <circle cx="128" cy="98" r="2" fill="#d4af37"/>
+                                <circle cx="192" cy="98" r="2" fill="#d4af37"/>
+                                <!-- Hand gesture -->
+                                <ellipse cx="95" cy="170" rx="12" ry="14" fill="#E8B894"/>
+                                <ellipse cx="225" cy="170" rx="12" ry="14" fill="#E8B894"/>
+                            </svg>
+                        </div>
+
+                        <button class="exp-video__play" aria-label="Play">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7L8 5z"/></svg>
+                        </button>
+
+                        <div class="exp-video__controls">
+                            <div class="exp-video__controls-left">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7L8 5z"/></svg>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 8v8a4.5 4.5 0 002.5-4z"/></svg>
+                                <span>1:46 / 4:29</span>
+                            </div>
+                            <div class="exp-video__controls-right">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="white" opacity="0.8"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7z"/><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="white" opacity="0.8"><rect x="3" y="3" width="18" height="18" rx="2" stroke="white" stroke-width="2" fill="none"/></svg>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="white" opacity="0.8"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exp-video__metrics">
+                        <span>Métricas</span>
+                        <div class="exp-video__mrow">
+                            <div>
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#7a7a7a" stroke-width="2"/><path d="M8 12l3 3 5-6" stroke="#7a7a7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <small>Vendas</small>
+                                <strong>R$ 186.245</strong>
+                            </div>
+                            <div>
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="7" r="4" stroke="#7a7a7a" stroke-width="2"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" stroke="#7a7a7a" stroke-width="2"/></svg>
+                                <small>Alunos</small>
+                                <strong>3.678</strong>
+                            </div>
+                            <div>
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#7a7a7a" stroke-width="2"/><path d="M12 6v6l4 2" stroke="#7a7a7a" stroke-width="2" stroke-linecap="round"/></svg>
+                                <small>Conversão</small>
+                                <strong>18,6%</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile mockup -->
+                <div class="exp-mobile">
+                    <div class="exp-mobile__notch"></div>
+                    <div class="exp-mobile__screen">
+                        <div class="exp-mobile__top">
+                            <div class="exp-mobile__logo">
+                                <svg viewBox="0 0 115 118" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M34.8526 0.0164865C35.3649 -0.0100135 35.1082 -0.0462642 35.6024 0.278236C38.0889 7.08049 41.3772 13.585 43.7937 20.432C45.9452 26.5275 40.5802 29.3447 36.6929 33.1212C26.5579 42.9677 28.7729 58.2125 28.7704 71.145L28.8166 109.524C23.0566 112.065 15.4034 115.342 9.55639 117.436C3.68864 118.517 0.171645 115.748 0.0628951 109.73C-0.00285494 106.101 0.0323919 102.46 0.0408919 98.8302L0.0591414 78.5787C0.0553914 74.7812 0.0361421 70.95 0.0473921 67.1707C0.0841421 54.781 -0.819359 43.9832 3.86514 32.162C9.88114 16.9797 20.0429 6.61199 34.8526 0.0164865Z" fill="#014572"/>
+                                    <path d="M91.4224 52.3836C96.9924 51.9503 108.02 52.2683 114.02 52.2748C113.57 61.1196 112.77 67.4728 109.07 75.6923C102.407 90.4948 91.5324 100.197 76.6074 106.048C70.2661 108.384 63.5579 109.567 56.7996 109.541L56.8171 95.1051C56.8126 86.2101 55.2976 82.2278 65.1094 79.4653C73.9774 76.9683 81.2949 69.5323 83.8274 60.7148C85.1824 55.9946 86.3599 53.4948 91.4224 52.3836Z" fill="#43C834"/>
+                                </svg>
+                                <em>academy</em>
+                            </div>
+                            <div class="exp-mobile__topicons">
+                                <span class="exp-mobile__bell"></span>
+                            </div>
+                        </div>
+                        <small class="exp-mobile__hello">Olá, produtor!</small>
+
+                        <div class="exp-mobile__videocard">
+                            <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                                <rect width="160" height="100" fill="#2a2a2a"/>
+                                <!-- Mini woman -->
+                                <path d="M55 28 Q 50 45 55 75 L 65 100 L 105 100 L 115 75 Q 120 45 115 28 Q 105 18 85 18 Q 65 18 55 28z" fill="#3d2817"/>
+                                <path d="M60 75 Q 55 85 55 100 L 115 100 Q 115 85 110 75 Q 100 70 85 70 Q 70 70 60 75z" fill="#1a1a1a"/>
+                                <rect x="78" y="58" width="14" height="14" fill="#E8B894"/>
+                                <ellipse cx="85" cy="45" rx="18" ry="22" fill="#E8B894"/>
+                                <ellipse cx="78" cy="42" rx="1.5" ry="1.8" fill="#2a1a0a"/>
+                                <ellipse cx="92" cy="42" rx="1.5" ry="1.8" fill="#2a1a0a"/>
+                                <path d="M80 53 Q 85 57 90 53" stroke="#a05050" stroke-width="1.5" fill="#e89090"/>
+                            </svg>
+                        </div>
+
+                        <h6>Dashboard</h6>
+                        <div class="exp-mobile__list">
+                            <a class="active">
+                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/><rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/></svg>
+                                <span>Início</span>
+                            </a>
+                            <a>
+                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="currentColor" stroke-width="2"/></svg>
+                                Minha Cursos
+                            </a>
+                            <a>
+                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><rect x="2" y="6" width="20" height="12" rx="2" stroke="currentColor" stroke-width="2"/></svg>
+                                Financeiro
+                            </a>
+                            <a>
+                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" stroke="currentColor" stroke-width="2"/></svg>
+                                Relatórios
+                            </a>
+                            <a>
+                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" stroke="currentColor" stroke-width="2"/></svg>
+                                Comunidade
+                            </a>
+                            <a>
+                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/></svg>
+                                Configurações
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== AUTONOMIA / PRICING ===== -->
+    <section class="autonomia" id="planos">
+        <div class="autonomia__bg"></div>
+        <div class="container">
+            <div class="autonomia__inner">
+                <div class="autonomia__intro">
+                    <span class="eyebrow">A MELHOR TAXA DO MERCADO</span>
+                    <h2 class="section-title">
+                        Mais autonomia.<br/>
+                        Mais performance.<br/>
+                        <span class="text-grad">Menos complicação.</span>
+                    </h2>
+                    <p class="autonomia__intro-lead">
+                        Sem mensalidade, sem fidelidade. Só você paga quando vender — e ainda com a taxa mais competitiva do mercado.
+                    </p>
+
+                    <div class="autonomia__grid">
+                        <article class="autonomia__feat">
+                            <div class="autonomia__feat-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8M14 7h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <div class="autonomia__feat-text">
+                                <strong>Taxas competitivas</strong>
+                                <span>Fique com mais do que você vende.</span>
+                            </div>
+                            <span class="autonomia__feat-num"></span>
+                        </article>
+                        <article class="autonomia__feat">
+                            <div class="autonomia__feat-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 15v3m-3-6h6M5 8a4 4 0 014-4h6a4 4 0 014 4v2a4 4 0 01-4 4H9a4 4 0 01-4-4V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <div class="autonomia__feat-text">
+                                <strong>Liberdade de ensinar</strong>
+                                <span>Ensine do seu jeito, sem amarras.</span>
+                            </div>
+                            <span class="autonomia__feat-num"></span>
+                        </article>
+                        <article class="autonomia__feat">
+                            <div class="autonomia__feat-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="13" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 21h8M12 19v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </div>
+                            <div class="autonomia__feat-text">
+                                <strong>Plataforma 100% estável</strong>
+                                <span>Seu negócio sempre no ar.</span>
+                            </div>
+                            <span class="autonomia__feat-num"></span>
+                        </article>
+                        <article class="autonomia__feat">
+                            <div class="autonomia__feat-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M2 10h20" stroke="currentColor" stroke-width="2"/></svg>
+                            </div>
+                            <div class="autonomia__feat-text">
+                                <strong>Recebimento em D+7, melhor fluxo</strong>
+                                <span>de caixa para seu negócio.</span>
+                            </div>
+                            <span class="autonomia__feat-num"></span>
+                        </article>
+                        <article class="autonomia__feat">
+                            <div class="autonomia__feat-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <div class="autonomia__feat-text">
+                                <strong>Segurança garantida</strong>
+                                <span>Proteção total para você e seus alunos.</span>
+                            </div>
+                            <span class="autonomia__feat-num"></span>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="autonomia__pricecard">
+                    <div class="autonomia__pricecard-glow"></div>
+                    <div class="autonomia__pricecard-glow autonomia__pricecard-glow--2"></div>
+                    <svg class="autonomia__pricecard-mark" viewBox="0 0 115 118" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M34.8526 0.0164865C35.3649 -0.0100135 35.1082 -0.0462642 35.6024 0.278236C38.0889 7.08049 41.3772 13.585 43.7937 20.432C45.9452 26.5275 40.5802 29.3447 36.6929 33.1212C26.5579 42.9677 28.7729 58.2125 28.7704 71.145L28.8166 109.524C23.0566 112.065 15.4034 115.342 9.55639 117.436C3.68864 118.517 0.171645 115.748 0.0628951 109.73C-0.00285494 106.101 0.0323919 102.46 0.0408919 98.8302L0.0591414 78.5787C0.0553914 74.7812 0.0361421 70.95 0.0473921 67.1707C0.0841421 54.781 -0.819359 43.9832 3.86514 32.162C9.88114 16.9797 20.0429 6.61199 34.8526 0.0164865Z" fill="#FFFFFF"/>
+                        <path d="M91.4224 52.3836C96.9924 51.9503 108.02 52.2683 114.02 52.2748C113.57 61.1196 112.77 67.4728 109.07 75.6923C102.407 90.4948 91.5324 100.197 76.6074 106.048C70.2661 108.384 63.5579 109.567 56.7996 109.541L56.8171 95.1051C56.8126 86.2101 55.2976 82.2278 65.1094 79.4653C73.9774 76.9683 81.2949 69.5323 83.8274 60.7148C85.1824 55.9946 86.3599 53.4948 91.4224 52.3836Z" fill="#43C834"/>
+                    </svg>
+
+                    <span class="autonomia__pricebadge">
+                        <span class="dot dot--success"></span>
+                        Mais escolhido
+                    </span>
+
+                    <span class="autonomia__pricelabel">A partir de</span>
+
+                    <div class="autonomia__priceline">
+                        <h2>7,99<small>%</small></h2>
+                    </div>
+                    <span class="autonomia__pricedesc">por venda <strong>+ R$0,39</strong></span>
+
+                    <div class="autonomia__pricedivider"></div>
+
+                    <ul class="autonomia__priceperks">
+                        <li>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="#5CC815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Sem mensalidade
+                        </li>
+                        <li>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="#5CC815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Parcelamento em até 21x
+                        </li>
+                        <li>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="#5CC815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Recebimento em D+7
+                        </li>
+                        <li>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="#5CC815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Suporte humanizado
+                        </li>
+                    </ul>
+
+                    <a href="#cadastro" class="btn btn--primary">
+                        FAZER CADASTRO
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <small class="autonomia__pricefoot">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="#5CC815" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Sem compromisso
+                    </small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BOTTOM BAND ===== -->
+    <section class="band">
+        <div class="container band__inner">
+            <div class="band__item">
+                <div class="band__icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#5CC815" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="#5CC815" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                    <strong>Saque 100% seguro</strong>
+                    <span>com repasse automático</span>
+                </div>
+            </div>
+            <div class="band__item">
+                <div class="band__icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="#5CC815" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="#5CC815" stroke-width="2"/></svg>
+                </div>
+                <div>
+                    <strong>Conformidade LGPD</strong>
+                    <span>Seus dados e dos seus alunos protegidos.</span>
+                </div>
+            </div>
+            <div class="band__item">
+                <div class="band__icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="7" r="4" stroke="#5CC815" stroke-width="2"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" stroke="#5CC815" stroke-width="2"/><circle cx="17" cy="7" r="2" fill="#5CC815"/></svg>
+                </div>
+                <div>
+                    <strong>+10 mil transações por mês</strong>
+                    <span>utilizando o ecossistema Parpay</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="suporte">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <a href="#" class="logo">
+                    <span class="logo__wordmark">
+                        <svg viewBox="0 0 519 94" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Parpay">
+                            <path d="M384.28 0.532357C386.87 0.322958 389.466 0.268759 392.061 0.369271C402.08 0.7621 411.324 5.69004 418.074 12.9669C423.101 8.00006 425.524 6.08422 431.956 3.31361C433.401 5.38335 438.222 16.5814 438.055 19.0333C437.781 22.977 429.921 27.2548 429.088 32.0021C427.048 43.627 427.926 60.3675 428.075 72.2697C425.547 73.7579 414.576 78.5312 411.562 77.8214C409.672 76.0634 408.935 74.7392 407.794 72.4601C404.164 74.6409 400.04 75.65 395.819 76.3576C361.073 82.1856 337.863 43.1032 358.914 15.1554C365.017 7.05772 373.926 1.98186 384.28 0.532357ZM408.222 37.4454C407.592 27.0563 398.7 19.1226 388.311 19.6847C377.829 20.2518 369.81 29.2487 370.445 39.7335C371.079 50.2185 380.125 58.1823 390.598 57.4796C400.978 56.7835 408.852 47.8351 408.222 37.4454Z" fill="#43C834"/>
+                            <path d="M130.122 0.532337C144.163 -1.015 154.168 3.35611 163.998 13.0284C167.354 8.81317 172.952 5.18813 177.981 3.27355C187.903 28.7348 184.294 14.3665 174.562 32.5851C172.793 35.8966 173.904 65.8418 173.72 72.7345C169.472 74.1747 161.15 78.3378 157.247 77.8058C155.023 75.7501 154.892 75.0572 154.149 72.1485C150.239 74.3249 145.963 75.7656 141.534 76.3995C130.964 77.9402 120.926 75.9997 112.32 69.5441C103.971 63.2987 98.4683 53.9693 97.0381 43.6378C95.6693 33.8548 98.5183 23.3091 104.457 15.4464C110.679 7.24634 119.92 1.87646 130.122 0.532337ZM153.769 34.5851C151.565 24.4309 141.594 17.9511 131.426 20.0655C121.129 22.2067 114.553 32.3372 116.784 42.6202C119.016 52.9032 129.199 59.3926 139.456 57.0685C149.585 54.773 155.972 44.7392 153.769 34.5851Z" fill="#FFFFFF"/>
+                            <path d="M297.782 0.528407C309.4 -0.248352 318.833 1.53704 328.002 9.34652C335.664 16.0006 340.436 25.3785 341.304 35.4932C342.137 45.7489 338.841 55.9124 332.148 63.725C323.966 73.2524 315.049 76.0782 303.091 77.0022C303.201 71.9594 302.417 64.6966 303.699 59.9844C304.646 57.8019 309.303 56.1055 311.383 55.2419C320.9 51.2929 324.592 39.8297 320.045 30.4808C317.833 25.8489 313.85 22.3037 308.995 20.6448C303.201 18.6632 299.095 19.4969 293.896 22.0634C292.424 22.931 291.045 23.9476 289.78 25.0964C280.603 33.4979 285.37 51.0187 284.123 62.1203C283.449 68.1303 285.269 89.7729 281.568 93.1409C276.911 94.6785 269.024 90.1978 264.301 88.1956C264.45 78.7223 265.468 38.3009 263.353 32.3407C261.56 27.2913 256.15 24.6022 254.55 20.3499C253.175 16.6856 258.586 6.79803 260.119 3.14082C266.393 5.64126 269.522 8.47102 274.505 12.9535C280.131 5.99085 289.093 1.91749 297.782 0.528407Z" fill="#43C834"/>
+                            <path d="M43.352 0.536904C97.62 -5.34654 103.238 75.697 48.5471 76.8185C48.6062 72.008 47.9576 65.3589 49.0582 60.8015C49.727 58.0317 54.5124 56.5941 57.0802 55.3134C62.0863 52.817 64.9409 50.3011 66.7879 44.8197C68.4066 40.0203 68.0392 34.773 65.7683 30.246C63.5094 25.6846 59.5281 22.2112 54.704 20.5933C48.9974 18.6858 44.5571 19.6544 39.4188 22.2103C27.2962 29.9563 29.7737 43.2098 29.586 55.8134C29.4794 62.9461 29.4247 71.4998 29.712 78.5166C30.6069 100.349 24.7315 93.8772 10.2729 88.4139C10.2195 73.9883 10.4729 59.1086 10.576 44.9846C10.68 30.6983 8.49724 30.4338 0.212686 20.0396C-1.20119 18.2662 4.85041 6.14526 6.10744 3.41206C12.3326 5.61317 15.2604 8.42573 20.0338 12.85C27.2751 6.18538 33.2575 2.08161 43.352 0.536904Z" fill="#FFFFFF"/>
+                            <path d="M482.819 0C488.067 0.0789103 494.385 -0.127402 499.456 0.604392C500.139 1.66549 501.131 3.88909 501.717 5.10713C501.025 7.392 500.227 9.56754 499.298 11.7629C492.799 27.0768 486.86 42.7923 479.814 57.8598C471.668 71.3358 461.19 75.7905 446.135 77.0112C446.162 73.3623 445.624 64.7113 446.307 61.7418C447.902 54.8052 466.473 54.8052 462.05 44.0871C457.401 32.4626 452.378 20.9791 447.611 9.40487C445.316 3.82737 446.087 0.940755 452.334 0.146803C456.379 -0.0462847 461.085 0.0480538 465.182 0.0326244C467.271 6.51958 471.17 15.0238 473.734 21.8709C476.739 16.0598 480.674 6.21452 482.819 0Z" fill="#43C834"/>
+                            <path d="M240.438 0.540745L245.456 0.270508C245.373 5.17882 246.505 12.1225 244.936 16.709C243.958 19.5669 239.151 20.9159 236.605 22.1511C234.6 23.1228 232.485 24.2566 231.102 26.0574C226.169 32.4761 212.526 67.4562 209.289 76.7646L195.519 76.7628C194.245 76.7465 193.305 76.5966 192.226 75.8842C191.39 75.3314 190.531 74.4925 190.354 73.4622C189.764 70.0299 207.626 28.6399 210.662 22.443C212.1 19.5083 213.758 16.5939 215.742 13.9912C221.381 6.59921 231.397 1.77333 240.438 0.540745Z" fill="#FFFFFF"/>
+                            <path d="M512.837 0.167045C515.529 -0.356673 518.142 1.38817 518.688 4.07729C519.239 6.76641 517.521 9.39558 514.838 9.96955C512.119 10.551 509.449 8.80266 508.894 6.07783C508.334 3.353 510.11 0.697816 512.837 0.167045Z" fill="#FFFFFF"/>
+                        </svg>
+                    </span>
+                    <em class="logo__sub">academy</em>
+                </a>
+                <p>Inovação nos pagamentos, parceria no sucesso.</p>
+            </div>
+            <div class="footer__cols">
+                <div>
+                    <h6>Plataforma</h6>
+                    <a href="#">Recursos</a>
+                    <a href="#">Planos</a>
+                    <a href="#">Segurança</a>
+                    <a href="#">API</a>
+                </div>
+                <div>
+                    <h6>Empresa</h6>
+                    <a href="#">Sobre</a>
+                    <a href="#">Carreiras</a>
+                    <a href="#">Imprensa</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div>
+                    <h6>Suporte</h6>
+                    <a href="#">Central de ajuda</a>
+                    <a href="#">Contato</a>
+                    <a href="#">Status</a>
+                    <a href="#">LGPD</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom container">
+            <small>© 2026 Parpay Academy · Todos os direitos reservados.</small>
+            <small>CNPJ: 00.000.000/0001-00</small>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
