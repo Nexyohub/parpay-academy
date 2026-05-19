@@ -4638,6 +4638,7 @@ ul { list-style: none; }
     /* CTA card - NÃO sticky, flow normal + blur igual aos outros */
     .experiencia__bento > .bento--cta {
         position: relative;
+        top: 0 !important;
         height: auto;
         min-height: 380px;
         margin-bottom: 0;
