@@ -50,7 +50,7 @@ html { scroll-behavior: smooth; }
     contain-intrinsic-size: 1px 800px;
 }
 html, body {
-    overflow-x: clip;
+    overflow-x: clip !important;
     max-width: 100vw;
     width: 100%;
     position: relative;
@@ -63,8 +63,13 @@ body {
     background: #FFFFFF;
     -webkit-font-smoothing: antialiased;
 }
-/* Garantir que toda section nunca cause overflow horizontal */
-section, header, footer, main { max-width: 100vw; overflow-x: clip; }
+/* Kill switch: nenhum elemento de bloco pode causar overflow horizontal */
+section, header, footer, main, aside, article, .container {
+    max-width: 100vw;
+    overflow-x: clip;
+}
+/* Imagens, SVGs e iframes nunca devem ultrapassar a viewport */
+img, svg, iframe, video, canvas { max-width: 100%; height: auto; }
 a { color: inherit; text-decoration: none; }
 img, svg { display: block; max-width: 100%; }
 button { font: inherit; cursor: pointer; border: 0; background: none; }
@@ -4325,7 +4330,27 @@ ul { list-style: none; }
 }
 
 @media (max-width: 680px) {
-    .container { padding: 0 20px; }
+    .container { padding: 0 20px; max-width: 100%; }
+
+    /* Autonomia — intro full-width + colunas responsivas para strokes simétricos */
+    .autonomia__intro {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .autonomia__grid {
+        width: 100%;
+    }
+    .autonomia__feat {
+        grid-template-columns: 32px 1fr auto;
+        padding: 14px 0;
+        gap: 12px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .autonomia__feat strong { font-size: 13.5px; }
+    .autonomia__feat span { font-size: 12px; }
+    .autonomia__feat-num { font-size: 10.5px; }
     .hero { padding: 36px 0 0; }
     .hero__title {
         font-size: 38px;
@@ -4444,10 +4469,12 @@ ul { list-style: none; }
     .section-title { font-size: 28px; }
     .autonomia__pricecard {
         padding: 28px 18px 24px;
-        max-width: calc(100vw - 36px);
+        max-width: 100%;
         width: 100%;
         border-radius: 24px;
         box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
     }
     .autonomia__priceline h2 {
         font-size: clamp(60px, 18vw, 90px);
