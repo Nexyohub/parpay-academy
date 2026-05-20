@@ -18,8 +18,8 @@
     --blue-700: #05253E;
     --blue-900: #021526;
 
-    /* Cor de texto azul-brand (mais claro pra títulos e ênfases) */
-    --brand-blue-text: #1565A0;
+    /* Cor de texto azul-brand oficial (mesmo azul do logotipo parpay.svg) */
+    --brand-blue-text: #014572;
 
     --ink-900: #0B1118;
     --ink-700: #1F2937;
