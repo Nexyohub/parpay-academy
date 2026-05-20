@@ -4091,34 +4091,35 @@ ul { list-style: none; }
     margin: 0 0 6px;
     position: relative;
     z-index: 2;
-    padding-top: 12px;
+    padding: 16px 24px 8px;
 }
 .autonomia__priceline h2 {
-    font-size: clamp(72px, 14vw, 120px);
+    font-size: clamp(64px, 12vw, 108px);
     font-weight: 800;
     color: var(--white);
     letter-spacing: -0.04em;
-    line-height: 1.25;
+    line-height: 1.3;
     background: linear-gradient(180deg, #fff 0%, #9FDF74 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     display: flex;
     align-items: flex-start;
-    padding-top: 18px;
-    filter: drop-shadow(0 4px 20px rgba(92, 200, 21, 0.3));
+    padding: 14px 6px 12px;
     overflow: visible;
 }
 .autonomia__priceline h2 small {
-    font-size: clamp(28px, 5.5vw, 46px);
+    font-size: clamp(26px, 5vw, 42px);
     font-weight: 700;
     background: linear-gradient(180deg, #5CC815, #2D5F0B);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 28px;
-    margin-left: 2px;
-    line-height: 1.3;
+    margin-top: 22px;
+    margin-left: 4px;
+    margin-right: 4px;
+    line-height: 1.4;
+    padding: 4px 2px;
     padding-top: 6px;
 }
 .autonomia__pricedesc {
@@ -4491,14 +4492,19 @@ ul { list-style: none; }
         margin-left: auto;
         margin-right: auto;
     }
+    .autonomia__priceline {
+        padding: 12px 16px 6px;
+    }
     .autonomia__priceline h2 {
-        font-size: clamp(60px, 18vw, 90px);
-        padding-top: 6px;
+        font-size: clamp(54px, 16vw, 84px);
+        padding: 12px 4px 10px;
+        line-height: 1.35;
     }
     .autonomia__priceline h2 small {
-        font-size: clamp(24px, 7vw, 36px);
-        margin-top: 14px;
-        line-height: 1.1;
+        font-size: clamp(22px, 6.5vw, 34px);
+        margin-top: 16px;
+        line-height: 1.4;
+        padding: 4px 2px;
     }
     .autonomia__pricecard-mark {
         top: 14px;
